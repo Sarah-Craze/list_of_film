@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Film</title>
+  <meta charset="UTF-8">
+  <!-- Assure une réactivité correcte sur les appareils mobiles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Search</title>
+
+  <!-- Lien vers votre feuille de style CSS personnalisée -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Lien CDN pour Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- Bootstrap Bundle JS qui inclut Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    
-    </footer>
+  <!-- En-tête de la page -->
+  <header class="bg-dark text-white text-center py-3">
+    <h1>Film Search</h1>
+  </header>
+
+  <!-- Partie principale de la page -->
+  <main>
+    <!-- Section de recherche de films -->
+    <section class="search mt-3">
+      <!-- Form pour rechercher un film -->
+      <form id="search-form" class="form-inline justify-content-center">
+        <div class="form-group mx-auto mb-2 col-sm-8 col-md-6 d-flex justify-content-center text-center">
+          <!-- Champ de texte pour indiquer le titre du film que l'on recherche -->
+          <label for="movie-title" class="sr-only">Search for a film:</label>
+          <input type="text" class="form-control text-center" id="movie-title" placeholder="Search for a film" required>
+
+      </div>
+      
+        <!-- Bouton pour lancer la recherche -->
+        <div class="text-center">
+        <button type="submit" class="btn btn-dark">Search</button>
+      </div>
+      </form>
+    </section>
+
+    <!-- Section pour afficher les résultats de recherche -->
+    <section class="results mt-4" id="movie-results">
+      <!-- Les films trouvés s'afficheront ici -->
+    </section>
+  </main>
+
+  <!-- Script JS pour la logique de recherche de films -->
+  <script src="script.js" type="module"></script>
 </body>
+
 </html>
